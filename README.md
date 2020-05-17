@@ -3,7 +3,7 @@ Custom fork of [estrattonbailey/mela](https://github.com/estrattonbailey/mela).
 Tiny utility to trigger animations on scroll. **800 bytes gzipped.**
 
 ## Usage
-`mela` works by applying an `mela-is-visible` class to any '`.mela-animate` element when it enters the
+This fork of `mela` works by applying an `mela-is-visible` class to any '`.mela-animate` element when it enters the
 viewport. This fork assumes a single css transition will be used globally. [estrattonbailey/mela](https://github.com/estrattonbailey/mela) allows for further customization using a data attribute.
 
 ### Config
