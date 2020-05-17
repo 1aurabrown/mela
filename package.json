@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/estrattonbailey/mela.git"
+    "url": "git+ssh://git@github.com/1aurabrown/mela.git"
   },
   "author": "estrattonbailey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/estrattonbailey/mela/issues"
+    "url": "https://github.com/1aurabrown/mela/issues"
   },
-  "homepage": "https://github.com/estrattonbailey/mela#readme",
+  "homepage": "https://github.com/1aurabrown/mela#readme",
   "devDependencies": {
     "microbundle": "^0.11.0"
   },
