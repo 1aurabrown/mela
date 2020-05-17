@@ -1,48 +1,25 @@
 # mela
+Custom fork of [estrattonbailey/mela](https://github.com/estrattonbailey/mela).
 Tiny utility to trigger animations on scroll. **800 bytes gzipped.**
 
-## Install
-```
-npm i mela --save
-```
-
 ## Usage
-`mela` works by applying an `is-visible` class to an element when it enters the
-viewport.
+`mela` works by applying an `mela-is-visible` class to any '`.mela-animate` element when it enters the
+viewport. This fork assumes a single css transition will be used globally. [estrattonbailey/mela](https://github.com/estrattonbailey/mela) allows for further customization using a data attribute.
 
 ### Config
-It's configured using an attribute in your markup. For each element you wish to
-animate, define `data-animate` and pass it the values you would like to use:
-```html
-<h1 data-animate='slide-up fast ease delay'>I will slide in!</h1>
-```
+Define your transition in CSS.
 
 ### Styles
-Use CSS attribute selectors to define those transition values:
+Use a class to define the transition values:
 ```css
-[data-animate] {
+.mela-animate {
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
-}
-
-[data-animate*="fast"] {
-  transition-duration: 200ms;
-}
-
-[data-animate*="ease"] {
-  transition-timing-function: ease-in-out;
-}
-
-[data-animate*="delay"] {
-  transition-delay: 200ms;
-}
-
-[data-animate*='slide-up'] {
   opacity: 0;
   transform: translateY(20px);
   transition-property: opacity, transform;
 
-  &.is-visible {
+  &.mela-is-visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -90,12 +67,17 @@ const animations = mela({
 })
 ```
 
-Finally, if you'd rather use something other than data-animate:
+Finally, if you'd rather use something other than `.mela-animate`:
 ```javascript
 const animations = mela({
-  attribute: 'data-anim'
+  class: 'anim'
 })
 ```
 
 ## License
+
+MIT License © [Laura Brown](https://laurabrown.xyz)
+
+Forked from:
+[estrattonbailey/mela](https://github.com/estrattonbailey/mela)
 MIT License © [Eric Bailey](https://estrattonbailey.com)
