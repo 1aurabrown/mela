@@ -3,7 +3,7 @@ import vsbl from 'vsbl'
 export default function mela ({
   reset = false,
   threshold = 0,
-  class="mela-animate",
+  className="mela-animate",
   visibleClass = "mela-is-visible"
 }) {
   let cache = new Map()
@@ -13,7 +13,7 @@ export default function mela ({
       !document.documentElement.contains(node) && cache.delete(node)
     })
 
-    const nodes = document.querySelectorAll('.' + class)
+    const nodes = document.querySelectorAll('.' + className)
 
     for (let i = nodes.length - 1; i > -1; i--) {
       if (cache.has(nodes[i])) continue
