@@ -5,7 +5,7 @@ export default function mela ({
   threshold = 0,
   className="mela-animate",
   visibleClass = "mela-is-visible"
-}) {
+} = {}) {
   let cache = new Map()
 
   return function init () {
